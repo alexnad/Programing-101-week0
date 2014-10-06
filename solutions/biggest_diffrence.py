@@ -1,4 +1,4 @@
-def biggest_diffrence(arr):
+def biggest_difference(arr):
     minimum = 0
     begin = 1
     for num1 in arr:
@@ -9,3 +9,5 @@ def biggest_diffrence(arr):
                 minimum = -abs(a - b)
 
     return minimum
+
+print(biggest_difference(range(100)))
