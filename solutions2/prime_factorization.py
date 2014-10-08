@@ -9,11 +9,11 @@ def next_prime(num):
 
 
 def factorise(num, prime):
-    arr = [num, prime,0]
+    arr = [num, 0]
 
     while arr[0] % prime == 0:
         arr[0] /= prime
-        arr[2] += 1
+        arr[1] += 1
 
     return arr
 
@@ -25,7 +25,7 @@ def prime_factorization(n):
 
     while num > 1:
         arr = factorise(num, prime)
-        if arr[2] > 0:
+        if arr[1] > 0:
             num = arr[0]
             factorised.append(tuple(arr[1:]))
         prime = next_prime(prime)
