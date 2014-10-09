@@ -1,4 +1,3 @@
-
 SIGNS = [
     [20, "Capricorn"],
     [19, "Aquarius"],
@@ -14,8 +13,9 @@ SIGNS = [
     [20, "Sagittarius"]
 ]
 
+
 def what_is_my_sign(day, month):
     if day <= SIGNS[month-1][0]:
         return SIGNS[month-1][1]
     else:
-        return SIGNS[month%12][1]
+        return SIGNS[month % 12][1]
