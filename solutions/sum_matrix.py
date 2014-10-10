@@ -1,7 +1,6 @@
 def sum_matrix(m):
-    sum = 0
+    sum_of_rows = 0
     for row in m:
-        for number in row:
-            sum += number
+        sum_of_rows += sum(row)
 
-    return sum
+    return sum_of_rows
