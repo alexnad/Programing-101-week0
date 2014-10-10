@@ -1,57 +1,21 @@
-try:
-    t=ar[5]
-except IndexError:
-    print 'sorry, no 5'  
-
-
 def neighbours(matrix, element):
-    try:
-        t=ar[5]
-    except IndexError:
-        return False  
+    pass
 
 
 def bomb_rows(matrix, index):
-    if index[0] < len(matrix) - 1:
-        matrix[index[0] + 1][index[1]] -= matrix[index[0]][index[1]]
-    if index[0] > 0:
-        matrix[index[0] - 1][index[1]] -= matrix[index[0]][index[1]]
-
-    for row in range(len(matrix)):
-        if matrix[row][index[1]] < 0:
-            matrix[row][index[1]] = 0
-
     return matrix
-    
-    start = [index[0] - 1, index[1] - 1]
-    end = [index[0] + 1, index[1] + 1]
-    if index[0] == 0:
-        start[0] = 0
-    if index[0] == len(matrix):
-        end[0] = index[0]
-
-    for i
 
 
 def bomb_columns(matrix, index):
-    if index[1] < len(matrix) - 1:
-        matrix[index[0]][index[1] + 1] -= matrix[index[0]][index[1]]
-    if index[1] > 0:
-        matrix[index[0]][index[1] - 1] -= matrix[index[0]][index[1]]
-    for column in range(len(matrix)):
-        if matrix[index[0]][column] < 0:
-            matrix[index[0]][column] = 0
-
     return matrix
 
 
 def matrix_sum(matrix):
-    sum = 0
+    sum_rows = 0
     for row in matrix:
-        for element in row:
-            sum += element
+        sum_rows += sum(row)
 
-    return sum
+    return sum_rows
 
 
 def bomb_neigbours(matrix, index):
