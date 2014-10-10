@@ -1,6 +1,7 @@
 def valid_index(matrix, index, bomb_place):
-    print(index[0] >= 0 and index[0] < len(matrix) and index[1] >= 0 \
+    print(index[0] >= 0 and index[0] < len(matrix) and index[1] >= 0 
         and index[1] < len(matrix) and index != bomb_place, index)
+
     return index[0] >= 0 and index[0] < len(matrix) and index[1] >= 0 \
         and index[1] < len(matrix) and index != bomb_place
 
@@ -40,6 +41,3 @@ def matrix_bombing_plan(m):
     return bombed_matrix
 
 print(matrix_bombing_plan([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
-[123]
-[456]
-[789]
