@@ -1,3 +1,16 @@
+try:
+    t=ar[5]
+except IndexError:
+    print 'sorry, no 5'  
+
+
+def neighbours(matrix, element):
+    try:
+        t=ar[5]
+    except IndexError:
+        return False  
+
+
 def bomb_rows(matrix, index):
     if index[0] < len(matrix) - 1:
         matrix[index[0] + 1][index[1]] -= matrix[index[0]][index[1]]
