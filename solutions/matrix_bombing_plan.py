@@ -1,9 +1,8 @@
 def valid_index(matrix, index, bomb_place):
-    print(index[0] >= 0 and index[0] < len(matrix) and index[1] >= 0 
-        and index[1] < len(matrix) and index != bomb_place, index)
+    valid_row_index = index[0] >= 0 and index[0] < len(matrix)
+    valid_column_index = index[1] >= 0 and index[1] < len(matrix)
 
-    return index[0] >= 0 and index[0] < len(matrix) and index[1] >= 0 \
-        and index[1] < len(matrix) and index != bomb_place
+    return valid_column_index and valid_row_index and index != bomb_place
 
 
 def detonate(element, amount):
@@ -19,7 +18,7 @@ def plant_bomb(matrix, index):
         for j in range(index[1] - 1, index[1] + 2):
             if valid_index(matrix, (i, j), index):
                 matrix[i][j] = detonate(matrix[i][j], bomb_damage)
-
+    print(matrix)
     return matrix
 
 
@@ -36,6 +35,7 @@ def matrix_bombing_plan(m):
 
     for i in range(len(m)):
         for j in range(len(m)):
+            print(m)
             bombed_matrix[(i, j)] = matrix_sum(plant_bomb(m, (i, j)))
 
     return bombed_matrix
