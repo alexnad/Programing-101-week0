@@ -12,13 +12,13 @@ def detonate(element, amount):
 
 
 def plant_bomb(matrix, index):
+    matrix = [[y for y in x] for x in matrix]
     bomb_damage = matrix[index[0]][index[1]]
 
     for i in range(index[0] - 1, index[0] + 2):
         for j in range(index[1] - 1, index[1] + 2):
             if valid_index(matrix, (i, j), index):
                 matrix[i][j] = detonate(matrix[i][j], bomb_damage)
-    print(matrix)
     return matrix
 
 
@@ -35,9 +35,6 @@ def matrix_bombing_plan(m):
 
     for i in range(len(m)):
         for j in range(len(m)):
-            print(m)
             bombed_matrix[(i, j)] = matrix_sum(plant_bomb(m, (i, j)))
 
     return bombed_matrix
-
-print(matrix_bombing_plan([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
