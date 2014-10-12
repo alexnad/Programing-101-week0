@@ -13,3 +13,5 @@ def is_an_bn(word):
     for a, b in zip(first_part, second_part):
         if a != 'a' or b != 'b':
             return False
+
+    return True
