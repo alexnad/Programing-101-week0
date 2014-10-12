@@ -8,5 +8,4 @@ def next_hack(n):
     while True:
         num += 1
         if is_int_palindrom(dec_to_bin(num)):
-            print(dec_to_bin(num))
             return num
