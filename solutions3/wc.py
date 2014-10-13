@@ -15,7 +15,7 @@ def main():
             print(len(text))
 
         if arg == 'words':
-            words = file.read().split(' ')
+            words = file.read().split()
             new_lines = words.count('\n')
             print(len(words) - new_lines)
 
